@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=OilWar
+Comment=A very simple mouse shooting game
+Icon=OilWar.png
+Exec=/usr/bin/oilwar &
+Terminal=0
+Type=Application
