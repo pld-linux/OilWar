@@ -6,4 +6,5 @@ Icon=OilWar.png
 Exec=oilwar
 Terminal=0
 Type=Application
+Categories=Games;Arcade;
 # vi: encoding=utf-8
