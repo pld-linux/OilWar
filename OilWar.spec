@@ -6,6 +6,7 @@ Release:	1
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://www.2ndpoint.fi/projektit/filut/%{name}-%{version}.tar.gz
+# Source0-md5:	6286e7f5a5f4f8ce6489a996b188caa2
 Source1:	%{name}.png
 Source2:	%{name}.desktop
 Patch0:		%{name}-am_remove_install-data-local.patch
