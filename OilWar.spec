@@ -43,12 +43,12 @@ CXXFLAGS="%{rpmcflags} -fno-rtti"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_datadir}/applications,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
-install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/applications
+install %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -58,6 +58,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README AUTHORS
 %attr(2755,root,games) %{_bindir}/*
 %{_datadir}/games/oilwar
-%{_datadir}/applications/*.desktop
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*.png
 %attr(664,root,games) %verify(not size mtime md5) %{_localstatedir}/games/*.scores
