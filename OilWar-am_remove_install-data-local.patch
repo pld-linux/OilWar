@@ -1,0 +1,9 @@
+--- OilWar-1.1.0/Makefile.am~	Sat Mar  8 22:50:35 2003
++++ OilWar-1.1.0/Makefile.am	Sat Mar  8 22:50:35 2003
+@@ -15,6 +15,3 @@
+ bin_PROGRAMS = oilwar
+ oilwar_SOURCES = Main.cpp cParticleSystem.hpp cParticleSystem.cpp
+ 
+-install-data-local:
+-	echo Setting access permissions of the highscore file
+-	chmod a+w $(DESTDIR)$(scorefiledir)/oilwar.scores
