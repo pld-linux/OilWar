@@ -2,13 +2,14 @@ Summary:	Very simple mouse shooting game
 Summary(pl):	Bardzo prosta strzelanka
 Name:		OilWar
 Version:	1.1.0
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://www.2ndpoint.fi/projektit/filut/%{name}-%{version}.tar.gz
 Source1:	%{name}.png
 Source2:	%{name}.desktop
 Patch0:		%{name}-am_remove_install-data-local.patch
+Patch1:		%{name}-FHS.patch
 URL:		http://www.2ndpoint.fi/projektit/oilwar.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -31,6 +32,7 @@ chroniæ olej, chroniæ ojczyznê...
 %prep
 %setup  -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
@@ -60,4 +62,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/games/oilwar
 %{_applnkdir}/Games/Arcade/*.desktop
 %{_pixmapsdir}/*.png
-%attr(664,root,games) %verify(not size mtime md5) %{_localstatedir}/lib/games/*.scores
+%attr(664,root,games) %verify(not size mtime md5) %{_localstatedir}/games/*.scores
