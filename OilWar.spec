@@ -24,7 +24,7 @@ your oil. Your mission: waste the invaders, protect the oil, protect
 the mother land...
 
 %description -l pl
-OilWar jest prost± gr± w której strzelasz do ¿o³nierzy i czo³gów 
+OilWar jest prost± gr± w której strzelasz do ¿o³nierzy i czo³gów
 nieprzyjaciela za pomoc± myszki. Armia wroga atakuje twoje terytorium
 i stara siê ukra¶æ zasoby oleju. Twoja misja: zniszczyæ naje¼d¼ców,
 chroniæ olej, chroniæ ojczyznê...
