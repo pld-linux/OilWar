@@ -2,6 +2,7 @@
 Name=OilWar
 Comment=A very simple mouse shooting game
 Icon=OilWar.png
-Exec=/usr/bin/oilwar &
+Exec=oilwar
 Terminal=0
 Type=Application
+# vi: encoding=utf-8
