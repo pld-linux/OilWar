@@ -1,4 +1,5 @@
 Summary:	Very simple mouse shooting game.
+Summary(pl):	Bardzo prosta strzelanka.
 Name:		OilWar
 Version:	1.1.0
 Release:	1
@@ -18,6 +19,12 @@ OilWar is a simple game where you shoot enemy soldiers and tanks with
 your mouse. The evil army is attacking your land and tries to steal
 your oil. Your mission: waste the invaders, protect the oil, protect
 the mother land...
+
+%description -l pl
+OilWar jest prost± gr± w której strzelasz do ¿o³nierzy i czo³gów 
+nieprzyjaciela za pomoc± myszki. Armia wroga atakuje twoje terytorium
+i stara siê ukra¶æ zasoby oleju. Twoja misja: zniszczyæ naje¼d¼ców,
+chroniæ olej, chroniæ ojczyznê...
 
 %prep
 %setup -q -n %{name}-%{version}
