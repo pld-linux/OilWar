@@ -1,5 +1,5 @@
-Summary:	Very simple mouse shooting game.
-Summary(pl):	Bardzo prosta strzelanka.
+Summary:	Very simple mouse shooting game
+Summary(pl):	Bardzo prosta strzelanka
 Name:		OilWar
 Version:	1.1.0
 Release:	1
@@ -8,8 +8,10 @@ Group:		X11/Applications/Games
 Source0:	http://www.2ndpoint.fi/projektit/filut/%{name}-%{version}.tar.gz
 Source1:	%{name}.png
 Source2:	%{name}.desktop
+Patch0:		%{name}-am_remove_install-data-local.patch
 URL:		http://www.2ndpoint.fi/projektit/oilwar.html
-BuildRequires:	SDL-devel >= 1.2.0
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -27,16 +29,20 @@ i stara siê ukra¶æ zasoby oleju. Twoja misja: zniszczyæ naje¼d¼ców,
 chroniæ olej, chroniæ ojczyznê...
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup  -q
+%patch0 -p1
 
 %build
 rm -f missing
-%configure2_13
+%{__aclocal}
+%{__autoconf}
+%{__automake}
+CXXFLAGS="%{rpmcflags} -fno-rtti"
+%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
@@ -47,12 +53,11 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README AUTHORS
-%attr(755,root,root) %{_bindir}/*
-%{_datadir}/games/oilwar/*
-%attr(666,root,root) %{_localstatedir}/lib/games/*.scores
+%attr(2755,root,games) %{_bindir}/*
+%{_datadir}/games/oilwar
 %{_applnkdir}/Games/Arcade/*.desktop
 %{_pixmapsdir}/*.png
+%attr(664,root,games) %verify(not size mtime md5) %{_localstatedir}/lib/games/*.scores
