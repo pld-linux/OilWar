@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=OilWar
 Comment=A very simple mouse shooting game
-Comment=Bardzo prosta strzelanka
+Comment[pl]=Bardzo prosta strzelanka
 Icon=OilWar.png
 Exec=oilwar
 Terminal=0
