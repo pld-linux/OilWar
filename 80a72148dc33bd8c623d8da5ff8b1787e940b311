@@ -1,0 +1,4 @@
+- added regenerate ac/am suit,
+- removed redundant BuildRequires rules (SDL-devel),
+- mark executable as sgid games and allow write access in score files,
+- added am_remove_install-data-local patch.
