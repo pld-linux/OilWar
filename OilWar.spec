@@ -11,10 +11,10 @@ Source1:	%{name}.png
 Source2:	%{name}.desktop
 Patch0:		%{name}-am_remove_install-data-local.patch
 URL:		http://www.2ndpoint.fi/projektit/oilwar.html
-BuildRequires:	autoconf
-BuildRequires:	automake
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,17 +24,16 @@ your oil. Your mission: waste the invaders, protect the oil, protect
 the mother land...
 
 %description -l pl
-OilWar jest prost± gr± w której strzelasz do ¿o³nierzy i czo³gów
-nieprzyjaciela za pomoc± myszki. Armia wroga atakuje twoje terytorium
-i stara siê ukra¶æ zasoby oleju. Twoja misja: zniszczyæ naje¼d¼ców,
-chroniæ olej, chroniæ ojczyznê...
+OilWar jest prost± gr± w której strzela siê do ¿o³nierzy i czo³gów
+nieprzyjaciela za pomoc± myszki. Armia wroga atakuje terytorium gracza
+i stara siê ukra¶æ zasoby oleju. Misja: zniszczyæ naje¼d¼ców, chroniæ
+olej, chroniæ ojczyznê...
 
 %prep
-%setup  -q
+%setup -q
 %patch0 -p1
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
