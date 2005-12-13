@@ -61,4 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/games/oilwar
 %{_desktopdir}/*.desktop
 %{_pixmapsdir}/*.png
-%attr(664,root,games) %verify(not size mtime md5) %{_localstatedir}/games/*.scores
+%attr(664,root,games) %verify(not md5 mtime size) %{_localstatedir}/games/*.scores
