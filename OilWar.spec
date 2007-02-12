@@ -1,5 +1,5 @@
 Summary:	Very simple mouse shooting game
-Summary(pl.UTF-8):   Bardzo prosta strzelanka
+Summary(pl.UTF-8):	Bardzo prosta strzelanka
 Name:		OilWar
 Version:	1.2.1
 Release:	1
