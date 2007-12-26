@@ -1,9 +1,8 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=OilWar
 Comment=A very simple mouse shooting game
 Comment[pl]=Bardzo prosta strzelanka
-Icon=OilWar.png
+Icon=OilWar
 Exec=oilwar
 Terminal=false
 Type=Application
